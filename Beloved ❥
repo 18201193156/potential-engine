@@ -1,0 +1,15 @@
+package test; 
+import javax.swing.JApplet; 
+import java.awt.*; 
+public class heart0 extends JApplet { 	
+	public void paint(Graphics page) 	{ 		
+		double x, y, t; 		
+		page.drawString("I love you !", 275, 60); 		 		
+		for(y = 2; y >= -2; y -= 0.005) 			
+			for(x = -200; x <= 200; x += 0.005) { 				
+				t = x*x + y*y - 1; 				
+				if(t*t*t + x*x*y*y*y <= 0) 					
+					page.drawOval((int)(x*200+300), (int)(y*200+300), 0, 0);
+		}
+	}
+}
